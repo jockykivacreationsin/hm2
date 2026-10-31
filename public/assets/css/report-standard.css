@@ -1,0 +1,75 @@
+/*
+ * report-standard.css - the single stylesheet for every PDF report that uses the
+ * "pdf.layouts.standard" layout. Loaded by LegacyReportRenderer::standard() through
+ * mPDF's HEADER_CSS mode, so do NOT repeat these rules inline in a report view.
+ * See docs/PDF_REPORTS.md.
+ *
+ * Font scale (keep every report on these sizes):
+ *   hospital name 18px | title 14px | body / section heading 12px | tables, info 11px | meta 10px
+ */
+
+body { font-family: Arial, sans-serif; font-size: 12px; margin: 20px; }
+
+/* ---- Header (partial: pdf.partials.report-header) ---- */
+.rpt-header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #000; padding-bottom: 10px; }
+.rpt-header h2 { margin: 5px 0; font-size: 18px; }
+.rpt-header p { margin: 3px 0; font-size: 11px; }
+
+/* ---- Report title ---- */
+.rpt-title { text-align: center; font-size: 14px; font-weight: bold; margin: 15px 0; text-decoration: underline; }
+
+/* ---- Patient / visit info block (2 or 4 column label/value table) ---- */
+.rpt-info { margin: 15px 0; }
+.rpt-info table { width: 100%; border-collapse: collapse; }
+.rpt-info td { padding: 4px; font-size: 11px; }
+.rpt-info .label { font-weight: bold; width: 120px; }
+
+/* ---- Section heading bar (e.g. one lab service, one bill section) ---- */
+.rpt-section { background-color: #f0f0f0; padding: 8px; font-weight: bold; border: 1px solid #ccc; margin-top: 15px; }
+
+/* ---- Data table ---- */
+.rpt-table { width: 100%; border-collapse: collapse; margin-top: 5px; }
+.rpt-table th { background-color: #e8e8e8; padding: 6px; border: 1px solid #999; font-size: 11px; text-align: left; }
+.rpt-table td { padding: 6px; border: 1px solid #ccc; font-size: 11px; }
+.rpt-table .num { text-align: right; }
+.rpt-table .center { text-align: center; }
+.rpt-group { background-color: #f9f9f9; font-weight: bold; }
+/* Classes that DataTables markup brings along when a table is printed (pdf.table-report). */
+.rpt-table .aright, .rpt-table .td-number { text-align: right; }
+.rpt-table tr.dtrg-group th { background-color: #f0f0f0; font-weight: bold; }
+.rpt-highlight { background-color: #ffe6e6; }
+
+/* ---- Compact variant for wide tables (many columns): add class rpt-table-sm next to rpt-table ---- */
+.rpt-table-sm th, .rpt-table-sm td { font-size: 10px; padding: 4px; }
+.rpt-on { background-color: #dbe8ff; }
+
+/* ---- Note / conclusion box ---- */
+.rpt-note { margin-top: 15px; padding: 10px; background-color: #f9f9f9; border-left: 4px solid #E94C3D; }
+.rpt-note-title { color: #E94C3D; font-size: 12px; font-weight: bold; }
+.rpt-note-body { font-size: 11px; line-height: 1.5; }
+.rpt-note-meta { margin-top: 8px; font-size: 10px; color: #666; }
+
+/* ---- Prescription pieces ---- */
+.rpt-rx { font-size: 18px; font-weight: bold; margin: 10px 0 2px; }
+.rpt-line { font-size: 11px; margin: 6px 0; }
+.rpt-meta { font-size: 10px; color: #666; margin: 4px 0; }
+.rpt-divider { border: none; border-top: 1px dashed #bbb; margin: 12px 0; }
+
+/* ---- Forms (consent etc.): two columns, signature lines, boxes, page break ---- */
+.rpt-cols { width: 100%; border-collapse: collapse; }
+.rpt-cols td { width: 50%; vertical-align: top; padding: 0 8px 0 0; }
+.rpt-cols td.rpt-col-right { padding: 0 0 0 8px; border-left: 1px solid #ccc; }
+.rpt-heading { font-size: 12px; font-weight: bold; margin: 8px 0 3px; }
+.rpt-box { background-color: #fafafa; border: 1px solid #ccc; padding: 8px; margin: 8px 0; }
+.rpt-sigline { display: inline-block; border-top: 1px solid #333; min-width: 140px; padding-top: 2px; text-align: center; font-size: 10px; }
+.rpt-hr { border-top: 1px solid #999; margin: 10px 0; }
+.rpt-pagebreak { page-break-before: always; }
+/* Hindi text: the default fonts have no Devanagari glyphs (font registered in LegacyReportRenderer::make). */
+.rpt-hi, .rpt-cols td.rpt-col-right, .rpt-form i { font-family: lohitdevanagari; }
+.rpt-form p, .rpt-form li { font-size: 11px; line-height: 1.5; margin: 4px 0; }
+.rpt-form .rpt-box td { font-size: 11px; padding: 2px 4px; }
+.rpt-form .rpt-cols td p { margin: 4px 0; }
+
+/* ---- Empty state + signature ---- */
+.rpt-empty { color: #666; font-style: italic; text-align: center; padding: 20px; }
+.rpt-signature { margin-top: 30px; text-align: right; }

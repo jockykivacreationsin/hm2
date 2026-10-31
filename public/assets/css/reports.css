@@ -1,0 +1,210 @@
+.page-inner
+{
+	margin-top:200px;
+}
+.fullwidth
+{
+	width:100%;
+}
+.border-table {
+	border:1px solid #F0F0F0;
+	border-collapse:collapse;
+	padding:3px;
+}
+.border-table th {
+	border:1px solid #F0F0F0;
+	padding:3px;
+	background: #f0f0f0;
+	color: #000;
+}
+.border-table td {
+	border:1px solid #F0F0F0;
+	text-align:left;
+	padding:3px;
+	background: #ffffff;
+	color: #000;
+}
+.la-table {
+	border:1px solid #F0F0F0;
+	border-collapse:collapse;
+	padding:3px;
+}
+
+.la-table th {
+	border:1px solid #F0F0F0;
+	text-align: left;
+	padding:3px;
+	background: #f0f0f0;
+	color: #000;
+}
+.la-table td {
+	border:1px solid #F0F0F0;
+	padding:3px;
+	background: #ffffff;
+	color: #000;
+}
+.td-number
+{
+	text-align: right;
+}
+
+.sign-img
+{
+height:50px;
+}
+
+.center
+{
+	text-align:center;
+}
+.aleft
+{
+	text-align: left;
+}
+.aright, .td-number
+{
+	text-align: right;
+}
+
+.bold
+{
+	font-weight: bold;
+}
+
+.font-small
+{
+	font-size: 12px;
+}
+
+.mt-10
+{
+	margin-top: 10px;
+}
+.mt-20
+{
+	margin-top: 20px;
+}
+.mt-30
+{
+	margin-top: 30px;
+}
+.mt-40
+{
+	margin-top: 40px;
+}
+.mt-80
+{
+	margin-top: 80px;
+}
+.col1
+{
+	width:10%;
+	float: left;
+}
+
+.col2
+{
+	width:20%;
+	float: left;
+}
+
+.col3
+{
+	width:30%;
+	float: left;
+}
+
+.col4
+{
+	width:40%;
+	float: left;
+}
+
+.col5
+{
+	width:50%;
+	float: left;
+}
+
+.col6
+{
+	width:60%;
+	float: left;
+}
+
+.col7
+{
+	width:70%;
+	float: left;
+}
+
+.col8
+{
+	width:80%;
+	float: left;
+}
+
+.col9
+{
+	width:90%;
+	float: left;
+}
+
+.col10
+{
+	width:100%;
+	float: left;
+}
+
+
+.report-head-a4-td p
+{
+	display: block;
+	margin-top: 8px
+}
+.a4-logo-td
+{
+	width: 120px;
+}
+.cu
+{
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-underline-offset: 8px;
+}
+.hindi { font-family: freeserif; }
+.m-0
+{
+	margin: 0px;
+}
+
+.m4
+{
+	margin: 0px;
+}
+
+.mt-0
+{
+	margin-top:0px;
+}
+
+.mb-0
+{
+	margin-bottom: 0px;
+}
+
+.mb-10
+{
+	margin-bottom:20px;
+}
+
+.mb-20
+{
+	margin-bottom:20px;
+}
+
+.sign
+{
+	margin-top:40px;
+}
+

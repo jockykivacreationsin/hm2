@@ -1,0 +1,1373 @@
+@media (min-width: 375px) {
+.row-col-margin div
+	{
+		margin-top: 8px;
+	}
+}
+
+@media (min-width: 576px) {
+	.row-col-margin div
+	{
+		margin-top: 8px;
+	}
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (min-width: 1400px) {
+
+}
+
+.treeview .btn-default {
+	border-color: #e3e5ef;
+}
+.treeview .btn-default:hover {
+	background-color: #f7faea;
+	color: #bada55;
+}
+.treeview ul {
+	list-style: none;
+	padding-left: 32px;
+}
+.treeview ul li {
+	padding: 50px 0px 0px 35px;
+	position: relative;
+}
+.treeview ul li:before {
+	content: "";
+	position: absolute;
+	top: -26px;
+	left: -31px;
+	border-left: 2px dashed #a2a5b5;
+	width: 1px;
+	height: 100%;
+}
+.treeview ul li:after {
+	content: "";
+	position: absolute;
+	border-top: 2px dashed #a2a5b5;
+	top: 70px;
+	left: -30px;
+	width: 65px;
+}
+.treeview ul li:last-child:before {
+	top: -22px;
+	height: 90px;
+}
+.treeview > ul > li:after, .treeview > ul > li:last-child:before {
+	content: unset;
+}
+.treeview > ul > li:before {
+	top: 90px;
+	left: 36px;
+}
+.treeview > ul > li:not(:last-child) > ul > li:before {
+	content: unset;
+}
+.treeview > ul > li > .treeview__level:before {
+	height: 60px;
+	width: 60px;
+	top: -9.5px;
+	background-color: #54a6d9;
+	border: 7.5px solid #d5e9f6;
+	font-size: 22px;
+}
+.treeview > ul > li > ul {
+	padding-left: 34px;
+}
+.treeview__level {
+	padding: 7px;
+	padding-left: 42.5px;
+	display: inline-block;
+	border-radius: 5px;
+	font-weight: 700;
+	border: 1px solid #e3e5ef;
+	position: relative;
+	z-index: 1;
+}
+.treeview__level:before {
+	content: attr(data-level);
+	position: absolute;
+	left: -27.5px;
+	top: -6.5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 55px;
+	width: 55px;
+	border-radius: 50%;
+	border: 7.5px solid #eef6d5;
+	background-color: #bada55;
+	color: #fff;
+	font-size: 20px;
+}
+.treeview__level-btns {
+	margin-left: 15px;
+	display: inline-block;
+	position: relative;
+}
+.treeview__level .level-same, .treeview__level .level-sub {
+	position: absolute;
+	display: none;
+	transition: opacity 250ms cubic-bezier(0.7, 0, 0.3, 1);
+}
+.treeview__level .level-same.in, .treeview__level .level-sub.in {
+	display: block;
+}
+.treeview__level .level-same.in .btn-default, .treeview__level .level-sub.in .btn-default {
+	background-color: #faeaea;
+	color: #da5555;
+}
+.treeview__level .level-same {
+	top: 0;
+	left: 45px;
+}
+.treeview__level .level-sub {
+	top: 42px;
+	left: 0px;
+}
+.treeview__level .level-remove {
+	display: none;
+}
+.treeview__level.selected {
+	background-color: #f9f9fb;
+	box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.treeview__level.selected .level-remove {
+	display: inline-block;
+}
+.treeview__level.selected .level-add {
+	display: none;
+}
+.treeview__level.selected .level-same, .treeview__level.selected .level-sub {
+	display: none;
+}
+.treeview .level-title {
+	cursor: pointer;
+	user-select: none;
+}
+.treeview .level-title:hover {
+	text-decoration: underline;
+}
+.treeview--mapview ul {
+	justify-content: center;
+	display: flex;
+}
+.treeview--mapview ul li:before {
+	content: unset;
+}
+.treeview--mapview ul li:after {
+	content: unset;
+}
+
+/*-Tree End-*/
+.codex-loader {
+	display: none !important;
+}
+.hidden
+{
+	display: none;
+}
+.center
+{
+	text-align: center;
+}
+.aright
+{
+	text-align: right!important;
+}
+.aleft
+{
+	text-align: left;
+}
+.bold
+{
+	font-weight: bold;
+}
+.flex-v-center
+{
+	align-items: center;
+}
+.small-action-btn
+{
+	display: inline-block;
+    margin-right: 4px;
+    background: #e8e8e8;
+    padding: 0px 4px;
+}
+.td-number
+{
+	text-align: right;
+}
+.fullwidth
+{
+	width:100%;
+}
+.nopadding
+{
+	padding: 0px;
+}
+.nptopbottom
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.npleftright
+{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.nptop
+{
+	padding-top: 0px;
+}
+.npbottom
+{
+	padding-bottom: 0px;
+}
+.npleft
+{
+	padding-left: 0px;
+}
+.npright
+{
+	padding-right: 0px;
+}
+.caps
+{
+	text-transform: uppercase;
+}
+.w100
+{
+	width:100px;
+}
+.section-box
+{
+	margin-bottom: 20px;
+}
+.dashed2px
+{
+	margin: 8px 0px;
+}
+.dashed2px div {
+	padding-bottom: 12px;
+	border-bottom: 2px dashed #575757;
+}
+.ssbtn
+{
+	padding: 6px 12px;
+	color: #ffffff;
+	background-color: #0c4079 !important;
+	border-color: #0c4079 !important;
+}
+.hchartbox
+{
+	padding: 20px;
+	background: #fff;
+}
+.card-header-sm
+{
+	padding: 6px 20px;
+}
+.tr1btn
+{
+	width:20px!important;
+	padding: 0px!important;
+}
+.tr2btns
+{
+	width:76px!important;
+	padding: 0px!important;
+}
+.tr3btns
+{
+	width:102px!important;
+	padding: 0px!important;
+}
+.tr4btns
+{
+	width:130px!important;
+	padding: 0px!important;
+}
+.tr5btns
+{
+	width:160px!important;
+	padding: 0px!important;
+}
+.no-sort::after, .no-sort::before { display: none!important; }
+
+.canvasjs-chart-credit
+{
+	display: none;
+}
+.login-name
+{
+	padding: 12px 10px 0px 12px;
+	font-size: 16px;
+}
+.img-btns {
+	position: absolute;
+	bottom: 6px;
+}
+.edit-image-btn {
+	border: none;
+	background: #fe9f43;
+	color: #FFF;
+	border-radius: 4px;
+	text-transform: uppercase;
+	padding: 3px 8px;
+}
+.img-wrapper {
+	display: flex;
+	position: relative;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+}
+#edit_image_box {
+	display: none;
+}
+.local-forms {
+	position: relative;
+}
+.req-star
+{
+	color: #FF0000;
+}
+
+#ipd_patient_info_box, #opd_patient_info_box
+{
+	display: none;
+}
+.local-forms label {
+	font-size: 13px;
+	color: #343434;
+	font-weight: 500;
+	position: absolute;
+	top: -10px;
+	background: #fff;
+	margin-bottom: 0;
+	padding: 0px 5px;
+	z-index: 1;
+}
+.select2-search__field:focus-visible {
+	outline: -webkit-focus-ring-color auto 0px;
+}
+.select2-container .select2-search--inline .select2-search__field{
+	margin-top: 8px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice
+{
+	margin-top:7px;
+}
+.local-forms .select2-container {
+	width: 100% !important;
+}
+.select2-container .select2-selection--single {
+	min-height: 38px;
+	border-color: #e5e5e5;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered
+{
+	min-width: 100px;
+	min-height: 20px;
+	line-height: 20px;
+}
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+	color: #8392a5;
+}
+.select2-container .select2-selection--multiple {
+	min-height: 38px;
+	border-color: #e5e5e5;
+}
+
+.form-control:disabled, .form-control[readonly] {
+	background-color: #ffffff;
+	opacity: 1;
+}
+.ipd-wrap {
+	margin-top: 83px;
+}
+.ipd-menu
+{
+	padding: 10px 0px;
+	background-color: #e6ecf1 !important;
+}
+.ipd-menu .nav-link
+{
+	white-space: nowrap;
+}
+.ipd-menu .dropdown-menu
+{
+	font-size: 14px;
+}
+.ipd-menu .dropdown-item i
+{
+	width: 18px;
+	text-align: center;
+	margin-right: 4px;
+}
+.ipd-menu .dropdown-item.active, .ipd-menu .dropdown-item:active
+{
+	background: #b7daff;
+	color: #0c4079;
+}
+.tbl-filter-box
+{
+	display: flex;
+	gap: 10px;
+}
+
+.fields-flex-row
+{
+	display: flex;
+	gap: 10px;
+}
+
+.mbutton
+{
+	padding: 4px 10px;
+	color: #ffffff;
+	background-color: #0c4079 !important;
+	border-color: #0c4079 !important;
+	margin-left: 8px;
+}
+
+.mbutton:hover
+{
+	background-color: rgba(12, 64, 121, 0.9) !important;
+	color: #FFF;
+}
+
+.navbar-light .navbar-nav .show>.nav-link, .navbar-light .navbar-nav .nav-link.active {
+	background: #b7daff;
+	font-size: 14px;
+	text-transform: capitalize;
+	font-weight: 600;
+	color: #0c4079;
+	border-bottom: 3px solid #0c4079;
+}
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus
+{
+	background: #b7daff;
+	font-size: 14px;
+	color: #0c4079;
+	border-bottom: 3px solid #0c4079;
+}
+
+.card-ipd
+{
+	margin-bottom: 0px;
+	transition: all 0.5s ease;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-color: #fff;
+	background-clip: border-box;
+}
+
+.card-ipd .card-body
+{
+	/*height: calc(100vh - 200px);*/
+}
+
+.card-menu
+{
+
+}
+.ipd-patient-info-top-bar
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.ipd-patient-name
+{
+	font-weight: bold;
+}
+.ipd-patient-name .patient-name
+{
+	margin-right:6px;
+}
+.ipd-patient-links ul
+{
+
+}
+.ipd-patient-links ul li
+{
+	float: left;
+	margin-left: 8px
+}
+.ipd-patient-links ul li a
+{
+	background: #efefef;
+	padding: 2px 6px;
+}
+
+table.dataTable tfoot th, table.dataTable tfoot td {
+	padding: 2px 10px 2px 10px!important;
+}
+
+.ipd-patient-overview-row
+{
+	height:100%;
+}
+.ipd-patient-left-part
+{
+	border-right: 1px solid #e8e8e8;
+}
+
+.row-bottom-border
+{
+	border-bottom: 1px solid #e8e8e8;
+	margin-top: 10px;
+	padding-bottom: 10px;
+}
+.fg-bottom-border {
+	border-bottom: 1px solid #e8e8e8;
+	margin-top: 10px;
+
+}
+.table-sm-bottom-border {
+	border-bottom: 1px solid #e8e8e8;
+	margin-top: 10px;
+	padding-bottom: 0px;
+}
+
+.ipd-patient-personal-bar
+{
+
+}
+.ipd-patient-personal-ul li
+{
+	display: flex;
+	margin-top: 6px;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.ipd-patient-tag-bar
+{
+
+}
+
+.ipd-patient-tag-bar .tag-title
+{
+	font-weight: bold;
+}
+
+.ipd-patient-tag-bar ul li
+{
+
+}
+
+.ipd-patient-consultant-doctor-box ul li
+{
+	display: flex;
+	margin-top: 6px;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.ipd-billing-pb-box-title
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.ipd-billing-pb-box-amount
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.progress-sm
+{
+	height: 8px;
+}
+.table-text-sm th, .table-text-sm td
+{
+	font-size: 12px;
+}
+
+.sm-table .table-title
+{
+	font-weight: bold;
+}
+.ipd-patient-consultant-doctor-box
+{
+
+}
+.ipd-title-with-buttons
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.ipd-title
+{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.ipd-buttons ul li a, .ipd-buttons ul li button
+{
+	padding: 4px 10px;
+	color: #ffffff;
+	background-color: #0c4079 !important;
+	border-color: #0c4079 !important;
+	margin-left: 8px;
+	border: none;
+}
+
+.ipd-buttons ul li
+{
+	float: left;
+}
+
+.ipd-buttons ul li a:hover, .ipd-buttons ul li button:hover
+{
+	background-color: rgba(12, 64, 121, 0.9) !important;
+}
+
+.tbl-top-buttons
+{
+	display: flex;
+	align-items: center;
+}
+
+.tbl-top-buttons ul
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.tbl-top-buttons ul li a
+{
+	padding: 6px 10px;
+	color: #ffffff;
+	background-color: #0c4079 !important;
+	border-color: #0c4079 !important;
+	margin-left: 8px;
+}
+
+.tbl-top-buttons ul li a:hover
+{
+	background-color: rgba(12, 64, 121, 0.9) !important;
+}
+
+.tr-sm-action-buttons a
+{
+	display: inline-block;
+	margin-right: 4px;
+	background: #e8e8e8;
+	padding: 0px 4px;
+}
+
+.tr-sm-action-buttons a:hover
+{
+	background: #0c4079;
+	color: #FFF;
+}
+
+/* Force left alignment for action button columns */
+.tr-sm-action-buttons,
+td.tr-sm-action-buttons,
+th.tr-sm-action-buttons,
+.sorting_1.tr-sm-action-buttons {
+	text-align: left !important;
+}
+
+/* Remove center alignment from sorting_1 class when applied to action columns */
+table.dataTable tbody td.sorting_1:first-child {
+	text-align: left !important;
+}
+button.dt-button, div.dt-button, a.dt-button, input.dt-button
+{
+	padding: 2px 6px;
+}
+.dataTables_wrapper .dataTables_length
+{
+	float: right;
+	margin-left: 10px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button
+{
+	padding: 2px 6px;
+}
+.flex-row-wb
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.flex-row-wb .local-forms
+{
+	flex: 1;
+	margin-right: 10px;
+	margin-bottom: 0px;
+}
+.flex-row-wb .btn
+{
+	margin-top: 2px;
+}
+.ipd-pdwi-box, .opd-pdwi-box
+{
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.ipd-pd-name, .opd-pd-name
+{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.ipd-pd-l2 span, .opd-pd-l2 span
+{
+	margin-right: 8px;
+}
+.ipd-pd-l2 span i, .opd-pd-l2 span i
+{
+	margin-right: 2px;
+}
+.title-with-small-buttons
+{
+	display: flex;
+	justify-content: space-between;
+}
+.ipd-doctor-box
+{
+	position: relative;
+	border: 1px solid #f1f3f8;
+	padding: 0px 8px 0px 0px;
+	margin-top: 10px
+}
+.ipd-remove-doctor-btn
+{
+	position: absolute;
+	right: -7px;
+	top: -10px;
+	font-size: 16px;
+}
+
+.ipd-remove-doctor-btn:hover
+{
+	color: #e61414;
+}
+.dincome-card
+{
+	background: #FFF;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+.dincome-icon
+{
+	font-size: 30px;
+	background: #0c4079;
+	color: #FFF;
+	padding: 6px 10px;
+	margin-right: 10px;
+}
+
+/* Different background colors for each income card */
+.opd-card .dincome-icon
+{
+	background: #28a745; /* Green */
+}
+.ipd-card .dincome-icon
+{
+	background: #007bff; /* Blue */
+}
+.dcd-card .dincome-icon
+{
+	background: #6f42c1; /* Purple */
+}
+.pharma-card .dincome-icon
+{
+	background: #fd7e14; /* Orange */
+}
+.biochem-card .dincome-icon
+{
+	background: #20c997; /* Teal */
+}
+.radiology-card .dincome-icon
+{
+	background: #e83e8c; /* Pink */
+}
+.stats-card .dincome-icon
+{
+	background: #6c757d; /* Gray */
+}
+.alert-card .dincome-icon
+{
+	background: #dc3545; /* Red */
+}
+.dincome-content
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.dincome-text
+{
+	font-size: 16px;
+}
+.dincome-number
+{
+	font-size: 16px;
+	font-weight: bold;
+}
+.slick-slide {
+	padding-left: 3px;
+	padding-right: 3px;
+}
+.staff-slide-box
+{
+	background: #f2f2f2;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	gap: 10px;
+}
+
+.staff-slide-box .staff-detail
+{
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	justify-content: center;
+}
+.bed-card
+{
+	padding: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.bed-green
+{
+	background: #1b9400;
+	color: #FFF;
+}
+.bed-red
+{
+	background: #ff6060;
+	color: #FFF;
+}
+.bed-icon
+{
+	font-size: 50px;
+}
+.bed-icon img
+{
+	width:48px;
+}
+.bed-content
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.bed-patient
+{
+	font-size: 12px;
+}
+.floor-card .card-body {
+	padding: 4px 20px 12px 20px;
+}
+.floor-area-box
+{
+	margin-top:10px;
+}
+.floor-area-name
+{
+	background: #e6ecf1;
+	padding: 2px 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	border-left: 3px solid #0c4079;
+}
+.bed-box
+{
+	position: relative;
+	margin-top: 8px;
+	padding-inline-end: 4px;
+	padding-inline-start: 4px;
+}
+.top-custom-menu
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.navbar-light .navbar-nav .nav-link
+{
+	border-bottom: 3px solid rgba(0,0,0,0);
+}
+
+#beds-ui-box .card-header
+{
+	padding: 6px 20px;
+}
+
+.btn-sm
+{
+	padding: 6px 10px;
+}
+.btn-xs i
+{
+font-size: 14px!important;
+}
+.btn-xs
+{
+	padding: 4px 8px;
+}
+.mp-tbl-title
+{
+	font-size: 14px;
+	font-weight: bold;
+}
+.token-number
+{
+	font-weight: bold;
+}
+.no-access
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 10%;
+	gap: 20px;
+}
+.no-access i
+{
+	font-size: 60px;
+	color: #ee4472;
+}
+.no-access p
+{
+	font-size: 30px;
+	color: #535353;
+}
+.vital-signs-box
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.vital-signs-box li span
+{
+	font-weight: bold;
+}
+#ipd_discharge_investigations
+{
+
+}
+#ipd_discharge_investigations .ibox, #dcd_discharge_investigations .ibox
+{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-top: 6px;
+}
+#ipd_discharge_treatment_advised .tabox, #dcd_discharge_treatment_advised .tabox
+{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-top: 6px;
+}
+.rdi-tiny-btn
+{
+	position: absolute;
+	right: 5px;
+	top: -10px;
+	font-size: 16px;
+	color: #000;
+}
+.ta-ul
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.tiny-days-field
+{
+	width: 26px;
+}
+.flex-row-g4
+{
+	display: flex;
+	flex-direction: row;
+	gap: 4px;
+}
+.swal2-popup
+{
+	font-size: .7rem!important;
+}
+.bottom-center-btns
+{
+	margin-top: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+#ipd_discharge_procedures .pcbox, #dcd_discharge_procedures .pcbox
+{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	gap: 12px;
+	margin-top: 6px;
+}
+
+#report-period-monthly, #report-period-periodic
+{
+	display: none;
+}
+
+.rp-box
+{
+
+}
+
+.rp-box .level-1 {
+	padding: 6px 12px;
+}
+
+.rp-box .level-1 label span{
+	font-weight: bold;
+}
+
+.rp-box .level-2 label span{
+	font-weight: normal;
+}
+
+.rp-box .level-3 label span{
+	font-weight: normal;
+}
+
+.rp-box .level-2
+{
+	margin-left: 28px
+}
+
+.rp-box .level-3
+{
+	margin-left: 28px
+}
+.hnl-box
+{
+	display: flex;
+	gap: 6px;
+	align-items: center;
+}
+
+.hn-logo
+{
+	width: 40px;
+	height: 40px;
+	padding: 6px 2px 2px 2px;
+	border: 1px solid #e6e6e6;
+	border-radius: 50%;
+}
+
+.nl-sp-logo
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.sp-logo
+{
+	padding: 7px 2px 0px 2px;
+	width: 70px;
+	height: 70px;
+	border: 1px solid #cacaca;
+	border-radius: 50%;
+}
+
+.fminwidth
+{
+	width: fit-content;
+}
+
+.fmaxwidth
+{
+	width: max-content;
+	flex: 1;
+}
+
+.permissions-h
+{
+	display: flex;
+    justify-content: space-between;
+}
+
+.alert-action-btn
+{
+	color: #FFF;
+    background: #000;
+    padding: 2px 10px;
+    display: inline-block;
+    margin-left: 8px;
+}
+.top-rq-alert
+{
+	position: absolute;
+}
+
+.ihclass
+{
+	color: #d60606;
+}
+.inline-checkbox span
+{
+	height: 13px!important;
+	padding-left: 11px!important;
+}
+.inline-checkbox span:after, .inline-checkbox span:before
+{
+margin-top: 0px!important;
+}
+.inline-checkbox
+{
+	display: none;
+}
+.dtrg-level-0 th
+{
+background-color: #e1f0ff !important
+}
+#collect_ipd_payments_btn, #collect_opd_payments_btn, #collect_dcd_payments_btn
+{
+	display: none;
+}
+.basic-checkbox
+{
+	position: relative!important;
+    opacity: 1!important;
+    pointer-events: auto!important;
+    margin-left: 6px;
+    margin-right: 2px;
+    height: 16px;
+    width: 16px;
+}
+.flex-td
+{
+	display: inline-flex;
+    align-items: center;
+    margin-right: -1px;
+}
+.empty-bed-ico
+{
+	position: absolute;
+    left: 10px;
+    top: 3px;
+    color: #FFF;
+}
+.in_value_field
+{
+	width: 80px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.small-input-field
+{
+	width: 152px;
+}
+.small-btn
+{
+	display: inline-block;
+    background: #10b981;
+    color: #FFF;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+.no-border
+{
+	border: none;
+}
+
+.no-border:focus-visible
+{
+outline: -webkit-focus-ring-color auto 0px;
+}
+
+.days_priority_normal
+{
+font-weight: bold;
+    color: #0035ff;
+}
+
+.days_priority_high
+{
+font-weight: bold;
+    color: #ffbf00;
+}
+
+.days_priority_urgent
+{
+font-weight: bold;
+    color: #ff2a2a;
+}
+.fc-toolbar
+{
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+    justify-content: space-between;
+}
+.fc-center h2
+{
+	font-size: 20px;
+}
+.cal-btn
+{
+	background: #0c4079;
+    color: #FFF;
+    padding: 4px 10px;
+}
+
+.cal-btn:hover
+{
+	background: #E94C3D;
+	color: #FFF;
+}
+
+.attendance-dots
+{
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nowrap td
+{
+	white-space: nowrap;
+}
+
+.roster-td
+{
+	display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+.roster-td a
+{
+	text-align: center;
+}
+.itbl
+{
+	margin-bottom: 0;
+}
+.picb-checkbox {
+	display: none;
+}
+
+.picb-checkbox span {
+	height: 13px !important;
+	padding-left: 11px !important;
+}
+
+#print_selected_invoices_btn {
+	display: none;
+}
+
+.page-item.active .page-link {
+    background-color: #0c4079;
+    border-color: #0c4079;
+}
+
+.page-link
+{
+	color: #0c4079;
+}
+
+/* DataTables: Prevent horizontal scrollbar */
+.dataTables_wrapper {
+	overflow-x: visible !important;
+}
+
+table.dataTable {
+	width: 100% !important;
+	table-layout: auto !important;
+}
+
+.table-responsive {
+	overflow-x: visible !important;
+}
+
+/* Ensure DataTables search and controls don't cause overflow */
+.dataTables_filter,
+.dataTables_length,
+.dataTables_info,
+.dataTables_paginate {
+	white-space: nowrap;
+}
+
+.small-switch .switch{
+    width: 44px!important;
+    height: 16px!important;
+}
+
+.small-switch .switch label .lever {
+    width: 24px!important;
+    height: 5px!important;
+}
+
+.small-switch .switch label .lever:before, .small-switch .switch label .lever:after {
+    width: 10px!important;
+    height: 10px!important;
+    top: -3px!important;
+}
+
+.add-medicine-btn
+{
+	padding: 10px;
+    width: 38px;
+}
+.add-medicine-brow
+{
+	display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.flex-1
+{
+	flex: 1;
+}
+.nav-tabs .nav-link
+{
+	color: #0c4079!important;
+}
+.tab-content>.tab-pane {
+margin-top: 20px;
+}

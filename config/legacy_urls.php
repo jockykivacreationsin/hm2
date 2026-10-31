@@ -1,0 +1,122 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Legacy URLs
+|--------------------------------------------------------------------------
+|
+| The old core-PHP application addressed every page as `page-name.php?id=...`. Staff still have those bookmarked, so each
+| old URL redirects to its Laravel route. Registered by routes/legacy.php through one invokable controller
+| (App\Http\Controllers\LegacyUrlRedirectController); delete this file and routes/legacy.php once the old URLs are no longer used.
+|
+|   'to'       target route name
+|   'name'     route name of the legacy URL itself (config/route_permissions.php authorises by this prefix)
+|   'query'    true  = forward the whole query string
+|   'params'   route parameter => query key, or a list of query keys (first one present wins)
+|   'int'      route parameters cast to int (a missing value becomes 0 and 404s, like the old app)
+|   'optional' route parameters / query keys that are dropped when empty
+|   'fixed'    route parameters with a constant value
+|
+*/
+
+return [
+    'pharma-product-categories.php' => ['name' => 'master.pharmacy-categories.legacy', 'to' => 'master.pharmacy-categories'],
+    'pharma-category-products.php' => ['name' => 'master.pharmacy-category-products.legacy', 'to' => 'master.pharmacy-category-products', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'tpa-companies.php' => ['name' => 'master.tpa.legacy', 'to' => 'master.tpa', 'query' => true],
+    'bunits.php' => ['name' => 'master.biochemistry-units.legacy', 'to' => 'master.biochemistry-units', 'query' => true],
+    'biochemistry-tests.php' => ['name' => 'master.biochemistry-tests.legacy', 'to' => 'master.biochemistry-tests', 'query' => true],
+    'biochemistry-sub-tests.php' => ['name' => 'master.biochemistry-sub-tests.legacy', 'to' => 'master.biochemistry-sub-tests', 'query' => true],
+    'diseases.php' => ['name' => 'master.diseases.legacy', 'to' => 'master.diseases', 'query' => true],
+    'disease-patients.php' => ['name' => 'master.disease-patients.legacy', 'to' => 'master.disease-patients', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'patient-medicine-issued-list.php' => ['name' => 'periodic-medicine.issued.legacy', 'to' => 'periodic-medicine.issued', 'params' => ['patientId' => 'id'], 'int' => ['patientId']],
+    'patient-medicine-issue-list.php' => ['name' => 'periodic-medicine.issue-list.legacy', 'to' => 'periodic-medicine.issue-list', 'query' => true],
+    'periodic-medicine-patients.php' => ['name' => 'periodic-medicine.patients.legacy', 'to' => 'periodic-medicine.index', 'query' => true],
+    'patient-medicine-due-days.php' => ['name' => 'periodic-medicine.due-days.legacy', 'to' => 'periodic-medicine.due-days', 'query' => true],
+    'abha-account-services.php' => ['name' => 'abdm.abha-account-services.legacy', 'to' => 'abdm.abha-account-services', 'query' => true],
+    'consent-requests.php' => ['name' => 'abdm.consent-requests.legacy', 'to' => 'abdm.consent-requests', 'query' => true],
+    'roles.php' => ['name' => 'roles.legacy', 'to' => 'roles.index', 'query' => true],
+    'role-permissions.php' => ['name' => 'roles.permissions.legacy', 'to' => 'roles.permissions', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'db-backups-list.php' => ['name' => 'db-backups.legacy-list', 'to' => 'db-backups.index', 'query' => true],
+    'charge-departments.php' => ['name' => 'charges.legacy.departments', 'to' => 'charges.departments'],
+    'charge-categories.php' => ['name' => 'charges.legacy.categories', 'to' => 'master.charge-categories', 'query' => true],
+    'charge-category-charges.php' => ['name' => 'charges.legacy.category-charges', 'to' => 'master.charge-category-charges', 'params' => ['id' => 'id', 'cd_id' => 'cd_id'], 'int' => ['id', 'cd_id'], 'optional' => ['cd_id']],
+    'beds.php' => ['name' => 'beds.legacy.index', 'to' => 'beds.index'],
+    'bds-floors.php' => ['name' => 'beds.legacy.floors', 'to' => 'beds.floors'],
+    'bds-floor-areas.php' => ['name' => 'beds.legacy.floor-areas', 'to' => 'beds.floor-areas', 'query' => true],
+    'bds-ward-categories.php' => ['name' => 'beds.legacy.ward-categories', 'to' => 'beds.ward-categories'],
+    'ipd-discharge.php' => ['name' => 'ipd.discharge.legacy', 'to' => 'ipd.discharge', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'discharge-approvals.php' => ['name' => 'ipd.discharge-approvals.legacy', 'to' => 'ipd.discharge-approvals', 'query' => true],
+    'view-discharge-approval.php' => ['name' => 'ipd.view-discharge-approval.legacy', 'to' => 'ipd.view-discharge-approval', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'dcd-discharge-approvals.php' => ['name' => 'dcd.discharge-approvals.legacy', 'to' => 'dcd.discharge-approvals', 'query' => true],
+    'view-dcd-discharge-approval.php' => ['name' => 'dcd.view-discharge-approval.legacy', 'to' => 'dcd.view-discharge-approval', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'discharged.php' => ['name' => 'ipd.discharged.legacy', 'to' => 'ipd.discharged', 'query' => true],
+    'view-discharged.php' => ['name' => 'ipd.view-discharged.legacy', 'to' => 'ipd.view-discharged', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'dcd-discharged.php' => ['name' => 'dcd.discharged.legacy', 'to' => 'dcd.discharged', 'query' => true],
+    'view-dcd-discharged.php' => ['name' => 'dcd.view-discharged.legacy', 'to' => 'dcd.view-discharged', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'rpt-discharge.php' => ['name' => 'pdf.discharge.legacy', 'to' => 'pdf.discharge.ipd', 'params' => ['dischargeId' => 'id'], 'int' => ['dischargeId']],
+    'rpt-dcd-discharge.php' => ['name' => 'pdf.discharge.dcd.legacy', 'to' => 'pdf.discharge.dcd', 'params' => ['dischargeId' => 'id'], 'int' => ['dischargeId']],
+    'ipd-overview.php' => ['name' => 'ipd.legacy.overview', 'to' => 'ipd.show', 'params' => ['id' => 'id'], 'int' => ['id']],
+    'sale-bills.php' => ['name' => 'sale-bills.legacy', 'to' => 'sale-bills.index', 'query' => true],
+    'rpt-sale-bills.php' => ['name' => 'rpt-sale-bills.legacy', 'to' => 'pdf.sale-bills', 'query' => true],
+    'sale-bills/rpt-sale-bills.php' => ['name' => 'sale-bills.rpt-sale-bills.legacy', 'to' => 'pdf.sale-bills', 'query' => true],
+    'report-collections.php' => ['name' => 'reports.collections.legacy', 'to' => 'reports.collections', 'query' => true],
+    'billing.php' => ['name' => 'billing.legacy.index', 'to' => 'billing.index'],
+    'staff-members.php' => ['name' => 'staff.legacy.index', 'to' => 'staff.index'],
+    'staff-attendance.php' => ['name' => 'staff.legacy.attendance', 'to' => 'staff.attendance'],
+    'staff-roster-calendar.php' => ['name' => 'staff.legacy.roster-calendar', 'to' => 'staff.roster-calendar', 'query' => true],
+    'staff-roster-dates.php' => ['name' => 'staff.legacy.roster-dates', 'to' => 'staff.roster-dates', 'query' => true],
+    'roster-staff-wise.php' => ['name' => 'staff.legacy.roster-staff-wise', 'to' => 'staff.roster.staff-wise', 'query' => true],
+    'rpt-staff-wise-roster.php' => ['name' => 'staff.legacy.rpt-staff-wise-roster', 'to' => 'pdf.staff-roster', 'query' => true],
+    'staff-salary.php' => ['name' => 'staff.legacy.salary', 'to' => 'staff.salary', 'query' => true],
+    'staff-salary-setting.php' => ['name' => 'staff.legacy.salary-settings', 'to' => 'staff.salary-settings', 'query' => true],
+    'rpt-bill.php' => ['name' => 'billing.legacy.bill-pdf', 'to' => 'pdf.receipt', 'params' => ['chargeId' => 'id']],
+    'opd-overview.php' => ['name' => 'opd.legacy.overview', 'to' => 'opd.show', 'params' => ['id' => 'id']],
+    'rpt-opd-visit-summary.php' => ['name' => 'opd.legacy.visit-summary-pdf', 'to' => 'pdf.opd.visit-summary', 'params' => ['opdId' => 'id']],
+    'opd-prescriptions.php' => ['name' => 'opd.legacy.prescriptions', 'to' => 'opd.prescriptions', 'params' => ['id' => 'id']],
+    'rpt-opd-prescription-pdf.php' => ['name' => 'opd.legacy.prescription-pdf', 'to' => 'pdf.opd.prescription', 'params' => ['opdId' => 'id', 'prescription_id' => 'prescription_id']],
+    'opd-charges.php' => ['name' => 'opd.legacy.charges', 'to' => 'opd.charges', 'params' => ['id' => 'id']],
+    'rpt-opd-bill.php' => ['name' => 'opd.legacy.bill-pdf', 'to' => 'pdf.receipt', 'params' => ['chargeId' => 'id']],
+    'rpt-opd-receipt.php' => ['name' => 'opd.legacy.receipt-pdf', 'to' => 'pdf.opd.receipt', 'params' => ['opdId' => 'id']],
+    'rpt-receipt.php' => ['name' => 'opd.legacy.card-slip-pdf', 'to' => 'pdf.opd.card-slip', 'params' => ['opdId' => 'id']],
+    'rpt-opd-consolidated-bill.php' => ['name' => 'opd.legacy.consolidated-bill-pdf', 'to' => 'pdf.opd.consolidated-bill', 'params' => ['opdId' => 'id']],
+    'rpt-opd-detailed-bill.php' => ['name' => 'opd.legacy.detailed-bill-pdf', 'to' => 'pdf.opd.detailed-bill', 'params' => ['opdId' => 'id']],
+    'opd-lab-investigations.php' => ['name' => 'opd.legacy.lab-investigations', 'to' => 'opd.lab-investigations', 'params' => ['id' => 'id']],
+    'opd-lab-investigation-result.php' => ['name' => 'opd.legacy.lab-investigation-result', 'to' => 'lab-results.result', 'params' => ['serviceId' => 'id'], 'fixed' => ['module' => 'opd']],
+    'rpt-opd-lab-investigations.php' => ['name' => 'opd.legacy.lab-report-pdf', 'to' => 'pdf.opd.lab-report', 'params' => ['opdId' => 'id', 'service_id' => 'service_id'], 'optional' => ['opdId', 'service_id']],
+    'opd-procedures.php' => ['name' => 'opd.legacy.procedures', 'to' => 'opd.procedures', 'params' => ['id' => 'id']],
+    'opd-visits.php' => ['name' => 'opd.legacy.visits', 'to' => 'opd.visits', 'params' => ['id' => 'id']],
+    'ipd-lab-investigations.php' => ['name' => 'ipd.legacy.lab-investigations', 'to' => 'ipd.lab-investigations', 'params' => ['id' => 'id']],
+    'ipd-lab-investigation-result.php' => ['name' => 'ipd.legacy.lab-investigation-result', 'to' => 'lab-results.result', 'params' => ['serviceId' => 'id'], 'fixed' => ['module' => 'ipd']],
+    'rpt-ipd-lab-investigations.php' => ['name' => 'ipd.legacy.lab-report-pdf', 'to' => 'pdf.ipd.lab-report', 'params' => ['ipdId' => ['ipd_id', 'id'], 'service_id' => 'service_id'], 'optional' => ['service_id']],
+    'ipd-procedures.php' => ['name' => 'ipd.legacy.procedures', 'to' => 'ipd.procedures', 'params' => ['id' => 'id']],
+    'ipd-charges.php' => ['name' => 'ipd.legacy.charges', 'to' => 'ipd.charges', 'params' => ['id' => 'id']],
+    'dcd-lab-investigations.php' => ['name' => 'dcd.legacy.lab-investigations', 'to' => 'dcd.lab-investigations', 'params' => ['id' => 'id']],
+    'dcd-lab-investigation-result.php' => ['name' => 'dcd.legacy.lab-investigation-result', 'to' => 'lab-results.result', 'params' => ['serviceId' => 'id'], 'fixed' => ['module' => 'dcd']],
+    'rpt-dcd-lab-investigations.php' => ['name' => 'dcd.legacy.lab-report-pdf', 'to' => 'pdf.dcd.lab-report', 'params' => ['dcdId' => ['dcd_id', 'id'], 'service_id' => 'service_id'], 'optional' => ['service_id']],
+    'dcd-procedures.php' => ['name' => 'dcd.legacy.procedures', 'to' => 'dcd.procedures', 'params' => ['id' => 'id']],
+    'dcd-list.php' => ['name' => 'dcd.legacy.list', 'to' => 'dcd.index', 'query' => true],
+    'dcd-overview.php' => ['name' => 'dcd.legacy.overview', 'to' => 'dcd.show', 'params' => ['id' => 'id'], 'optional' => ['id']],
+    'dcd-patient-file.php' => ['name' => 'dcd.legacy.patient-file', 'to' => 'dcd.patient-file', 'params' => ['id' => 'id']],
+    'dcd-prescriptions.php' => ['name' => 'dcd.legacy.prescriptions', 'to' => 'dcd.prescriptions', 'params' => ['id' => 'id']],
+    'dcd-charges.php' => ['name' => 'dcd.legacy.charges', 'to' => 'dcd.charges', 'params' => ['id' => 'id']],
+    'rpt-dcd-bill.php' => ['name' => 'dcd.legacy.bill-pdf', 'to' => 'pdf.receipt', 'params' => ['chargeId' => 'id']],
+    'rpt-dcd-discharge-bill.php' => ['name' => 'dcd.legacy.discharge-bill-pdf', 'to' => 'pdf.dcd.discharge-bill', 'params' => ['dcdId' => 'id']],
+    'rpt-dcd-discharge-detailed-bill.php' => ['name' => 'dcd.legacy.discharge-detailed-bill-pdf', 'to' => 'pdf.dcd.discharge-detailed-bill', 'params' => ['dcdId' => 'id']],
+    'dcd-visits.php' => ['name' => 'dcd.legacy.visits', 'to' => 'dcd.visits', 'params' => ['id' => 'id']],
+    'dcd-medications.php' => ['name' => 'dcd.legacy.medications', 'to' => 'dcd.medications', 'params' => ['id' => 'id']],
+    'dcd-discharge.php' => ['name' => 'dcd.legacy.discharge', 'to' => 'dcd.discharge', 'params' => ['id' => 'id']],
+    'rpt-ipd-prescription-pdf.php' => ['name' => 'ipd.legacy.prescription-pdf', 'to' => 'pdf.ipd.prescription', 'params' => ['ipdId' => ['ipd_id', 'id'], 'prescription_id' => 'prescription_id']],
+    'rpt-ipd-discharge-bill.php' => ['name' => 'ipd.legacy.discharge-bill-pdf', 'to' => 'pdf.ipd.discharge-bill', 'params' => ['ipdId' => 'id']],
+    'rpt-ipd-discharge-detailed-bill.php' => ['name' => 'ipd.legacy.discharge-detailed-bill-pdf', 'to' => 'pdf.ipd.discharge-detailed-bill', 'params' => ['ipdId' => 'id']],
+    'rpt-ipd-patients-file.php' => ['name' => 'ipd.legacy.patients-file-pdf', 'to' => 'pdf.ipd.patients-file', 'params' => ['ipdId' => 'id']],
+    'ipd-patient-file.php' => ['name' => 'ipd.legacy.patient-file', 'to' => 'ipd.patient-file', 'params' => ['id' => 'id']],
+    'ipd-bed-history.php' => ['name' => 'ipd.legacy.bed-history', 'to' => 'ipd.bed-history', 'params' => ['id' => 'id']],
+    'ipd-treatments.php' => ['name' => 'ipd.legacy.treatments', 'to' => 'ipd.treatments', 'params' => ['id' => ['ipd_id', 'id']]],
+    'rpt-ipd-treatment.php' => ['name' => 'ipd.legacy.treatment-pdf', 'to' => 'pdf.ipd.treatment', 'params' => ['ipdId' => ['ipd_id', 'id']]],
+    'ipd-vital-monitoring.php' => ['name' => 'ipd.legacy.vital-monitoring', 'to' => 'ipd.vital-monitoring', 'params' => ['id' => ['ipd_id', 'id']]],
+    'rpt-ipd-vital-monitoring.php' => ['name' => 'ipd.legacy.vital-monitoring-pdf', 'to' => 'pdf.ipd.vital-monitoring', 'params' => ['ipdId' => ['ipd_id', 'id']]],
+    'ipd-intake-output.php' => ['name' => 'ipd.legacy.intake-output', 'to' => 'ipd.intake-output', 'params' => ['id' => ['ipd_id', 'id']]],
+    'rpt-ipd-intake-output.php' => ['name' => 'ipd.legacy.intake-output-pdf', 'to' => 'pdf.ipd.intake-output', 'params' => ['ipdId' => ['ipd_id', 'id']]],
+    'ipd-progress-sheet.php' => ['name' => 'ipd.legacy.progress-sheet', 'to' => 'ipd.progress-sheet', 'params' => ['id' => 'id']],
+    'ipd-rmo-notes.php' => ['name' => 'ipd.legacy.rmo-notes', 'to' => 'ipd.rmo-notes', 'params' => ['id' => 'id']],
+];
